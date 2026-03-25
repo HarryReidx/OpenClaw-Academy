@@ -1,0 +1,19 @@
+{
+  "name": "openclaw-academy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "debug": "^4.4.3",
+    "expo": "~55.0.8",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-native": "0.83.2",
+    "react-native-web": "~0.21.0"
+  }
+}
