@@ -1,6 +1,6 @@
 export const heroMetrics = [
   { label: "核心名词", value: "12 个" },
-  { label: "重点演示", value: "6 段" },
+  { label: "重点演示", value: "7 段" },
   { label: "培训目标", value: "认知拉齐" },
 ];
 
@@ -30,9 +30,9 @@ export const trainingStages = [
     kicker: "Stage 03",
     title: "最后理解 OpenClaw 的位置",
     summary:
-      "OpenClaw 不是孤立的新名词，而是让 agent 具备 computer-use 能力的一种典型方式。",
+      "OpenClaw 不是孤立的新名词，而是多种 AI 能力的组合：把视觉识别、逻辑推理和工具调用放到一起。",
     focus: ["Observe", "Act", "Verify"],
-    outcome: "知道 OpenClaw 更适合连接没有 API 的界面型系统。",
+    outcome: "理解 OpenClaw 当前更适合作为个人助理来协助执行和验证任务。",
     accent: "#7a9e7e",
   },
 ];
@@ -109,7 +109,7 @@ export const glossaryTerms = [
     id: "openclaw",
     term: "OpenClaw",
     level: "重点讲",
-    description: "让 agent 具备 computer-use 能力，能够看界面、点按钮、填表单、检查结果。",
+    description: "它是多种 AI 能力的“组合拳”：集成视觉识别、逻辑推理和工具调用，让 AI 拥有眼睛和手。",
   },
   {
     id: "rag",
@@ -338,7 +338,7 @@ export const conceptDemos = [
     term: "OpenClaw",
     category: "Computer Use",
     tagline: "让 Agent 直接操作界面",
-    summary: "OpenClaw 让 agent 具备观察界面、执行动作和验证结果的能力，适合没有 API 的系统。",
+    summary: "OpenClaw 把观察界面、执行动作和验证结果组合起来，更适合在当前阶段承担个人助理式的辅助任务。",
     narrative: [
       "观察屏幕状态",
       "计划并执行点击 / 输入",
@@ -455,7 +455,7 @@ export const roleTracks = [
     highlights: [
       "理解 MCP、Skill、RAG、Workflow、Agent 之间的关系",
       "理解如何为高风险场景设计审计、回滚和人工介入",
-      "理解 OpenClaw 在旧系统场景下的价值",
+      "理解 OpenClaw 当前更适合作为个人助理，以及为什么需要谨慎控制风险边界",
     ],
   },
 ];
@@ -524,13 +524,13 @@ export const labs = [
   {
     id: "openclaw",
     title: "OpenClaw 演示",
-    tagline: "展示 computer-use 如何连接没有 API 的旧系统",
+    tagline: "展示 computer-use 如何作为个人助理协助完成界面操作",
     challenge:
       "模拟在传统后台系统里查找页面、输入内容、点击按钮、截图确认和回传结果的过程。",
     takeaways: [
-      "OpenClaw 解决的是最后一公里执行问题",
-      "它适合没有 API 的界面型系统",
-      "观察和验证往往比点击本身更重要",
+      "OpenClaw 解决的是最后一公里的人机协作执行问题",
+      "当前阶段更适合作为个人助理，而不是直接承担高风险自主执行",
+      "观察、校验和人工兜底往往比点击本身更重要",
     ],
   },
 ];
@@ -594,16 +594,16 @@ export const scenarioChallenges = [
     explanation: "目标明确但路径不固定，需要动态决策和多步迭代，这类场景更适合 Agent。",
   },
   {
-    id: "scenario-legacy",
-    title: "老旧后台录入",
-    description: "系统没有 API，只能登录网页后台、点菜单、填表单、提交并截图留痕。",
-    answer: "openclaw",
+    id: "scenario-prompt",
+    title: "任务描述不清",
+    description: "同一个模型做同一件事时，结果忽好忽坏。进一步排查发现，需求目标、限制条件和输出格式都没有说清楚。",
+    answer: "workflow",
     options: [
+      { id: "prompt", label: "Prompt" },
       { id: "workflow", label: "工作流" },
       { id: "agent", label: "Agent" },
-      { id: "openclaw", label: "OpenClaw" },
     ],
-    explanation: "当系统缺少 API 且必须依赖界面操作时，OpenClaw 这类 computer-use 方案更有价值。",
+    explanation: "这类问题的根子通常不在模型本身，而在任务说明不清。先把目标、约束和输出格式描述清楚，往往比急着上更复杂的方案更重要。",
   },
 ];
 
@@ -666,14 +666,14 @@ export const quizQuestions = [
   },
   {
     id: "q3",
-    prompt: "OpenClaw 最适合补足哪类系统的能力短板？",
+    prompt: "现阶段看，OpenClaw 更适合以什么方式参与工作？",
     options: [
-      "已经有成熟开放 API 的系统",
-      "没有 API、主要依赖界面操作的旧系统",
-      "完全不需要人工复核的系统",
+      "作为个人助理，协助人完成界面操作和结果校验",
+      "直接独立接管高风险核心流程",
+      "在没有人工复核的情况下自主连续执行",
     ],
-    answer: 1,
-    explanation: "OpenClaw 这类 computer-use 方案的价值，主要体现在与界面型旧系统的连接上。",
+    answer: 0,
+    explanation: "现阶段更稳妥的定位，是把 OpenClaw 当成个人助理式能力来使用，因为它仍然存在较多风险和不可控性。",
   },
 ];
 

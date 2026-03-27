@@ -11,6 +11,7 @@ import {
   useWindowDimensions,
   View,
 } from "react-native";
+import { SvgXml } from "react-native-svg";
 
 import {
   aiWordCloudTerms,
@@ -31,6 +32,7 @@ import {
   sampleRunLog,
   trainingStages,
 } from "./src/data/trainingContent";
+import { tsingyunAiLogoXml } from "./src/assets/tsingyunAiLogo";
 
 const backgroundShapes = [
   { top: -40, right: -50, size: 180, color: "rgba(240, 90, 40, 0.16)" },
@@ -589,7 +591,10 @@ function HeroSection({ isDesktop, isTablet }) {
   return (
     <View style={[styles.heroCard, isDesktop ? styles.heroCardDesktop : styles.stackGap]}>
       <View style={[styles.heroTextColumn, isDesktop && styles.heroTextColumnDesktop]}>
-        <Text style={styles.heroEyebrow}>Enterprise AI Training</Text>
+        <View style={styles.heroEyebrowRow}>
+          <SvgXml xml={tsingyunAiLogoXml} width={18} height={18} style={styles.heroEyebrowLogo} />
+          <Text style={styles.heroEyebrow}>AI For Tsingyun</Text>
+        </View>
         <Text style={styles.heroTitle}>从 LLM 到 Agent，再到 OpenClaw</Text>
         <Text style={styles.heroDescription}>
           这一页面向全公司同事，用来帮助大家理解 AI 的核心概念、能力边界、典型落地方式，以及在真实业务中应该如何判断和使用。
@@ -1063,6 +1068,14 @@ const styles = StyleSheet.create({
   heroTextColumnDesktop: {
     flex: 1.3,
     paddingRight: 18,
+  },
+  heroEyebrowRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  heroEyebrowLogo: {
+    opacity: 0.96,
   },
   heroEyebrow: {
     color: "#9a3412",
