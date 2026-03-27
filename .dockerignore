@@ -1,0 +1,11 @@
+.git
+.expo
+.expo-export-check
+.expo-export-check-2
+.expo-export-check-3
+.expo-export-check-4
+.expo-export-check-commit
+.idea
+.npm-cache
+node_modules
+web-dev.log
