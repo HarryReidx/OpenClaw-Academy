@@ -2,7 +2,7 @@
 
 面向公司内部培训与认知对齐的 AI 学习大纲项目。它围绕 `LLM -> Agent -> OpenClaw` 的主线设计培训页面，帮助同事先建立关键词地图，再理解典型能力、真实边界和落地方式，适合作为分享会、培训课和入门引导页。
 
-![AI培训大纲截图](./docs/ai-training-outline-preview.svg)
+![AI培训大纲截图](./docs/img.png)
 
 ## 项目亮点
 
